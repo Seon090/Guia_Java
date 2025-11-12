@@ -1,0 +1,191 @@
+<!DOCTYPE html> <html lang="es"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Guía Completa de Java</title> <style> body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f7f8; color: #333; margin: 0; padding: 0; } header { background-color: #0078d7; color: white; padding: 20px 40px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); } header h1 { margin: 0; font-weight: 700; font-size: 2.5rem; } main { max-width: 900px; margin: 30px auto; background: white; padding: 30px 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); } h2, h3 { color: #0078d7; margin-top: 1.5em; } pre { background: #272822; color: #f8f8f2; padding: 15px; border-radius: 5px; overflow-x: auto; font-size: 0.9rem; line-height: 1.4; margin: 15px 0; } code { font-family: 'Courier New', Courier, monospace; } p { line-height: 1.6; margin: 10px 0; } ul { margin-left: 20px; margin-bottom: 15px; } nav { position: fixed; top: 80px; right: 20px; background: #0078d7; color: white; padding: 15px 20px; border-radius: 8px; max-width: 220px; font-size: 0.9rem; box-shadow: 0 4px 10px rgba(0,0,0,0.15); height: calc(100vh - 100px); overflow-y: auto; } nav h3 { margin-top: 0; font-weight: 600; font-size: 1.1rem; border-bottom: 1px solid #005a9e; padding-bottom: 8px; } nav ul { list-style: none; padding-left: 0; } nav ul li { margin: 10px 0; } nav ul li a { color: white; text-decoration: none; transition: color 0.3s ease; } nav ul li a:hover { color: #ffcc00; } footer { text-align: center; padding: 20px; background: #0078d7; color: white; margin-top: 40px; font-size: 0.9rem; } /* Responsive */ @media (max-width: 900px) { nav { position: static; max-width: 100%; height: auto; margin-bottom: 20px; border-radius: 0; } main { margin: 20px; padding: 20px; } } </style> </head> <body> <header> <h1>Guía Completa de Java</h1> </header> <nav> <h3>Contenido</h3> <ul> <li><a href="#introduccion">Introducción</a></li> <li><a href="#tipos-de-variables">Tipos de Variables</a></li> <li><a href="#bucles">Bucles</a></li> <li><a href="#puertas-logicas">Puertas Lógicas</a></li> <li><a href="#ejecuciones-control-flujo">Ejecuciones y Control de Flujo</a></li> <li><a href="#metodos">Métodos</a></li> <li><a href="#clases-y-objetos">Clases y Objetos</a></li> <li><a href="#manejo-de-excepciones">Manejo de Excepciones</a></li> <li><a href="#arrays">Arrays</a></li> <li><a href="#colecciones">Colecciones</a></li> <li><a href="#modificadores-de-acceso">Modificadores de Acceso</a></li> <li><a href="#herencia">Herencia</a></li> <li><a href="#interfaces">Interfaces</a></li> <li><a href="#programacion-generica">Programación Genérica</a></li> <li><a href="#concurrencia">Concurrencia</a></li> <li><a href="#entrada-y-salida">Entrada y Salida (I/O)</a></li> <li><a href="#conclusion">Conclusión</a></li> </ul> </nav> <main> <section id="introduccion"> <h2>Introducción</h2> <p>Java es un lenguaje de programación orientado a objetos, multiplataforma y muy popular para desarrollar aplicaciones de todo tipo, desde aplicaciones móviles hasta sistemas empresariales.</p> <p>Fue creado por Sun Microsystems en 1995 y es conocido por su portabilidad gracias a la máquina virtual Java (JVM).</p> </section>
+
+    <section id="tipos-de-variables">
+        <h2>1. Tipos de Variables en Java</h2>
+        <p>Java es un lenguaje fuertemente tipado, lo que significa que cada variable debe declararse con un tipo específico. Los tipos de variables se dividen en:</p>
+        <h3>Tipos Primitivos</h3>
+        <ul>
+            <li><strong>byte:</strong> 8 bits, rango de -128 a 127.</li>
+            <li><strong>short:</strong> 16 bits, rango de -32,768 a 32,767.</li>
+            <li><strong>int:</strong> 32 bits, rango de -2,147,483,648 a 2,147,483,647.</li>
+            <li><strong>long:</strong> 64 bits, rango muy grande.</li>
+            <li><strong>float:</strong> 32 bits, números decimales con precisión simple.</li>
+            <li><strong>double:</strong> 64 bits, números decimales con precisión doble.</li>
+            <li><strong>char:</strong> 16 bits, representa un solo carácter Unicode.</li>
+            <li><strong>boolean:</strong> representa valores true o false.</li>
+        </ul>
+        <h3>Tipos de Referencia</h3>
+        <ul>
+            <li><strong>Clases:</strong> objetos creados a partir de clases.</li>
+            <li><strong>Arrays:</strong> colecciones de elementos del mismo tipo.</li>
+            <li><strong>Interfaces:</strong> tipos abstractos que definen métodos.</li>
+        </ul>
+    </section>
+
+    <section id="bucles">
+        <h2>2. Bucles en Java</h2>
+        <p>Los bucles permiten repetir bloques de código mientras se cumpla una condición.</p>
+        <h3>Bucle for</h3>
+        <pre><code>for(int i = 0; i &lt; 10; i++) {
+System.out.println(i);
+
+}</code></pre> <h3>Bucle while</h3> <pre><code>int i = 0; while(i < 10) { System.out.println(i); i++; }</code></pre> <h3>Bucle do-while</h3> <pre><code>int i = 0; do { System.out.println(i); i++; } while(i < 10); </code></pre> </section>
+
+    <section id="puertas-logicas">
+        <h2>3. Puertas Lógicas y Operadores Lógicos</h2>
+        <p>Java soporta operadores lógicos para controlar el flujo de programas:</p>
+        <ul>
+            <li><strong>&amp;&amp; (AND):</strong> true si ambos operandos son true.</li>
+            <li><strong>|| (OR):</strong> true si al menos un operando es true.</li>
+            <li><strong>! (NOT):</strong> invierte el valor lógico.</li>
+        </ul>
+        <p>Ejemplo:</p>
+        <pre><code>boolean a = true;
+
+boolean b = false; if(a && !b) { System.out.println("Condición verdadera"); }</code></pre> </section>
+
+    <section id="ejecuciones-control-flujo">
+        <h2>4. Ejecuciones y Control de Flujo</h2>
+        <p>Java permite controlar el flujo de ejecución con estructuras como:</p>
+        <ul>
+            <li><strong>if / else:</strong> Condicionales.</li>
+            <li><strong>switch:</strong> Selección múltiple.</li>
+            <li><strong>break:</strong> Salir de bucles o switch.</li>
+            <li><strong>continue:</strong> Saltar a la siguiente iteración del bucle.</li>
+        </ul>
+    </section>
+
+    <section id="metodos">
+        <h2>5. Métodos en Java</h2>
+        <p>Los métodos son bloques de código que realizan tareas específicas y pueden recibir parámetros y devolver valores.</p>
+        <h3>Declaración de un método</h3>
+        <pre><code>public int sumar(int a, int b) {
+return a + b;
+
+}</code></pre> <h3>Llamada a un método</h3> <pre><code>int resultado = sumar(5, 3); System.out.println(resultado); // 8</code></pre> <h3>Métodos estáticos y de instancia</h3> <ul> <li><strong>Estáticos:</strong> pertenecen a la clase y se llaman sin crear un objeto.</li> <li><strong>De instancia:</strong> pertenecen a un objeto y requieren una instancia para ser llamados.</li> </ul> </section>
+
+    <section id="clases-y-objetos">
+        <h2>6. Clases y Objetos</h2>
+        <p>Java es un lenguaje orientado a objetos. Una clase es un molde para crear objetos.</p>
+        <h3>Definición de una clase</h3>
+        <pre><code>public class Persona {
+String nombre;
+int edad;
+
+public Persona(String nombre, int edad) {
+    this.nombre = nombre;
+    this.edad = edad;
+}
+
+public void saludar() {
+    System.out.println("Hola, soy " + nombre);
+}
+
+}</code></pre> <h3>Crear un objeto</h3> <pre><code>Persona p = new Persona("Ana", 30); p.saludar();</code></pre> </section>
+
+    <section id="manejo-de-excepciones">
+        <h2>7. Manejo de Excepciones</h2>
+        <p>Permite manejar errores en tiempo de ejecución para evitar que el programa termine abruptamente.</p>
+        <h3>Try-catch</h3>
+        <pre><code>try {
+int division = 10 / 0;
+
+} catch(ArithmeticException e) { System.out.println("Error: División por cero"); }</code></pre> <h3>Finally</h3> <p>Bloque que se ejecuta siempre, haya o no excepción.</p> </section>
+
+    <section id="arrays">
+        <h2>8. Arrays</h2>
+        <p>Estructuras para almacenar múltiples valores del mismo tipo.</p>
+        <pre><code>int[] numeros = {1, 2, 3, 4, 5};
+
+System.out.println(numeros[0]); // Imprime 1</code></pre> </section>
+
+    <section id="colecciones">
+        <h2>9. Colecciones</h2>
+        <p>Java ofrece colecciones como ArrayList, HashMap, etc., para manejar grupos de objetos con más flexibilidad.</p>
+    </section>
+
+    <section id="modificadores-de-acceso">
+        <h2>10. Modificadores de Acceso</h2>
+        <ul>
+            <li><strong>public:</strong> Accesible desde cualquier clase.</li>
+            <li><strong>private:</strong> Solo accesible dentro de la misma clase.</li>
+            <li><strong>protected:</strong> Accesible dentro del paquete y subclases.</li>
+        </ul>
+    </section>
+
+    <section id="herencia">
+        <h2>11. Herencia</h2>
+        <p>Permite que una clase herede propiedades y métodos de otra.</p>
+        <pre><code>public class Animal {
+public void comer() {
+    System.out.println("Comiendo...");
+}
+
+}
+
+public class Perro extends Animal { public void ladrar() { System.out.println("Guau Guau"); } }</code></pre> </section>
+
+    <section id="interfaces">
+        <h2>12. Interfaces</h2>
+        <p>Definen métodos que las clases deben implementar.</p>
+        <pre><code>public interface Volador {
+void volar();
+
+}
+
+public class Pajaro implements Volador { public void volar() { System.out.println("Volando"); } }</code></pre> </section>
+
+    <section id="programacion-generica">
+        <h2>13. Programación Genérica</h2>
+        <p>Permite crear clases y métodos que operan con tipos genéricos.</p>
+        <pre><code>public class Caja&lt;T&gt; {
+private T contenido;
+
+public void setContenido(T contenido) {
+    this.contenido = contenido;
+}
+
+public T getContenido() {
+    return contenido;
+}
+
+}</code></pre> </section>
+
+    <section id="concurrencia">
+        <h2>14. Concurrencia y Hilos</h2>
+        <p>Java permite ejecutar múltiples hilos para tareas concurrentes.</p>
+        <pre><code>public class MiHilo extends Thread {
+public void run() {
+    System.out.println("Hilo en ejecución");
+}
+
+}
+
+MiHilo hilo = new MiHilo(); hilo.start();</code></pre> </section>
+
+    <section id="entrada-y-salida">
+        <h2>15. Entrada y Salida (I/O)</h2>
+        <p>Java ofrece clases para manejar entrada y salida de datos, como Scanner para entrada por consola.</p>
+        <pre><code>import java.util.Scanner;
+
+Scanner sc = new Scanner(System.in); System.out.print("Introduce tu nombre: "); String nombre = sc.nextLine(); System.out.println("Hola " + nombre);</code></pre> </section>
+
+    <section id="conclusion">
+        <h2>Conclusión</h2>
+        <p>Esta guía cubre los aspectos fundamentales y avanzados para aprender Java de manera completa. Puedes pedirme ejemplos específicos, ejercicios o profundizar en cualquier tema.</p>
+    </section>
+</main>
+
+<script>
+    // Smooth scroll for nav links
+    document.querySelectorAll('nav ul li a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+</body> </html>
